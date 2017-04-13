@@ -12,10 +12,6 @@ export default class Nav extends Component {
     };
   }
 
-  componentDidMount() {
-    console.log('componentDidMount');
-  }
-
   handleOnSubmit(e) {
     console.log(this);
     console.log(e.target);
@@ -27,22 +23,15 @@ export default class Nav extends Component {
 
   render() {
     return (
-      <div>
-        <div>
-          <ul>
-            <li>React URL Shortener</li>
+      <div className="top-bar">
+        <div className="top-bar-left">
+          <ul className="dropdown menu">
+            <li className="menu-text">URL Shortener</li>
             <li>
-              <IndexLink to="/" activeClassName="active-link">Shortener</IndexLink>
+              <IndexLink to="/" className="nav-link" activeClassName="active-link">Shortener</IndexLink>
             </li>
             <li>
-              <Link to="/about" activeClassName="active-link">About</Link>
-            </li>
-          </ul>
-        </div>
-        <div>
-          <ul>
-            <li>
-              Created by João Fernando
+              <Link to="/about" className="nav-link" activeClassName="active-link">About</Link>
             </li>
           </ul>
         </div>
