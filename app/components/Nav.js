@@ -6,19 +6,6 @@ import {Link, IndexLink} from 'react-router';
 export default class Nav extends Component {
   constructor(props) {
     super(props);
-    this.handleOnSubmit = ::this.handleOnSubmit;
-    this.state = {
-      name: 'João'
-    };
-  }
-
-  handleOnSubmit(e) {
-    console.log(this);
-    console.log(e.target);
-    window.alert(e.target.nodeType);
-    this.setState({
-      name: 'Malalala'
-    });
   }
 
   render() {
